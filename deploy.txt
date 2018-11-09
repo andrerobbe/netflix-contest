@@ -1,0 +1,28 @@
+https://github.com/3-Web-development/opdracht-p1-andrerobbe
+
+
+
+deploy:
+
+-FTP alles naar server, behalve vendor en npm_modules map
+
+-php7.2 op server
+
+-Verbind via SSH naar de server (Putty op windows)
+ -> $npm install
+ -> $composer update
+ -> $pico .env	   
+
+-Pas de DB variablen aan naar de variabelen van de server en save
+
+ -> php artisan migrate
+
+ -> cd routes
+ -> pico web.php
+
+-Verander de lijn "Auth::routes(['register' => false]);" naar "Auth::routes();"
+-Ga naar de website met url /register
+-Maak een admin account aan
+-Verander de lijn terug naar het orgineel: "Auth::routes(['register' => false]);"
+-Als get goed is doet de /register URL het niet meer
+

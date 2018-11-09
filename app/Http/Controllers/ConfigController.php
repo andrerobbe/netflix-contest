@@ -31,7 +31,14 @@ class ConfigController extends Controller
     		'p4_end' => 'required|date',
     	]);
 
-    	$cfg 		    = Config::find(1);
+        //if already set in db, overwrite, else create new
+        if(Config::find(1)){ 
+            $cfg        = Config::find(1);
+        }
+        else{
+            $cfg        = new Config;
+        }
+    	
         $cfg->email 	= $request->input('email');
         $cfg->p1_start 	= $request->input('p1_start');
         $cfg->p1_end 	= $request->input('p1_end');
