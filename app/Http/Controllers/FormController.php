@@ -87,6 +87,7 @@ class FormController extends Controller
             $msg->ip        = $request->ip();
 
             $msg->save();
+
             return redirect('/prijsvraag')->with('succes', 'Bedankt voor uw deelname!');
         }
         else{
