@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Form extends Model
 {
+	protected $table = 'forms';
     //
     //use SoftDeletes;
     

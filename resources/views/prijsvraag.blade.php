@@ -39,10 +39,10 @@
 				<div class="sidebar-right">
 					<h3>Winnaars</h3>
 					<ul class="nav flex-column">
-						<li>Periode 1 - Me</li>
-						<li>Periode 2 - Myself</li>
-						<li>Periode 3 - And</li>
-						<li>Periode 4  - I</li>
+						<li>Periode 1: {{$winner1}}</li>
+						<li>Periode 2: {{$winner2}}</li>
+						<li>Periode 3: {{$winner3}}</li>
+						<li>Periode 4: {{$winner4}}</li>
 					</ul>
 				</div>
 			</div>

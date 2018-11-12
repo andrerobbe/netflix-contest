@@ -8,12 +8,39 @@ use App\Form2;
 use App\Form3;
 use App\Form4;
 use App\Config;
+use App\Winners;
 
 class FormController extends Controller
 {   
     public function index(){
-        return view('prijsvraag');
+        $winner1 = '';
+        $winner2 = '';
+        $winner3 = '';
+        $winner4 = '';
+
+        /*
+        $winners = Winners::all();
+        
+        foreach ($winners as $winner => $value) {
+            $winnerID = $value->deelnemer;
+            if ($value->periode == 1){
+                $winner1 = Form::find($winnerID)->name;
+            }
+            if ($value->periode == 2){
+                $winner1 = Form2::find($winnerID)->name;
+            }
+            if ($value->periode == 3){
+                $winner1 = Form3::find($winnerID)->name;
+            }
+            if ($value->periode == 4){
+                $winner1 = Form4::find($winnerID)->name;
+            }
+        }
+        */
+
+        return view('prijsvraag', ["winner1" => $winner1, "winner2" => $winner2, "winner3" => $winner3, "winner4" => $winner4]);
     }
+
 
     public function submit(Request $request){
     	$this->validate($request, [

@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Form3 extends Model
 {
+	protected $table = 'form3s';
     //
-    use SoftDeletes;
+    //use SoftDeletes;
     
     /**
      * The attributes that should be mutated to dates.
