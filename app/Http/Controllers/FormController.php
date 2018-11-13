@@ -17,8 +17,7 @@ class FormController extends Controller
         $winner2 = '';
         $winner3 = '';
         $winner4 = '';
-
-        /*
+        
         $winners = Winners::all();
         
         foreach ($winners as $winner => $value) {
@@ -36,7 +35,6 @@ class FormController extends Controller
                 $winner1 = Form4::find($winnerID)->name;
             }
         }
-        */
 
         return view('prijsvraag', ["winner1" => $winner1, "winner2" => $winner2, "winner3" => $winner3, "winner4" => $winner4]);
     }
